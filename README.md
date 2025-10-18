@@ -22,18 +22,18 @@
     }
   </style>
 </head>
-<body>
+<body onload="start()">
   <div class="teams">
 
     <div class="team">
     <h1>Team Left</h1>
 
   <label class="ilabel" for="la">Magic:
-    <input id="la" type="number" step="any" inputmode="decimal" placeholder="0"/>
+    <input id="la" type="number" step="any" inputmode="decimal" value="0"/>
   </label>
 
   <label class="ilabel" for="lb">P3 Deaths:
-    <input id="lb" type="number" step="any" inputmode="decimal" placeholder="0"/>
+    <input id="lb" type="number" step="any" inputmode="decimal" value="0"/>
   </label>
 
   <label class="ilabel" for="lc">Fast Clear:
@@ -48,11 +48,11 @@
     <h1>Team Right</h1>
 
   <label class="ilabel" for="ra">Magic:
-    <input id="ra" type="number" step="any" inputmode="decimal" placeholder="0"/>
+    <input id="ra" type="number" step="any" inputmode="decimal" value="0"/>
   </label>
 
   <label class="ilabel" for="rb">P3 Deaths:
-    <input id="rb" type="number" step="any" inputmode="decimal" placeholder="0"/>
+    <input id="rb" type="number" step="any" inputmode="decimal" value="0"/>
   </label>
 
     <label class="ilabel" for="rc">Fast Clear:
@@ -102,6 +102,11 @@
         lc.checked = !rc.checked;
         rmultiply();
         lmultiply();
+    }
+
+    function start(){
+      rmultiply();
+      lmultiply();
     }
 
     // live update when inputs change
